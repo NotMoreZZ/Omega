@@ -12,7 +12,7 @@ class User
 	private $id;
 	
 	/** @var string */
-    private $name;
+	private $name;
 	
 	function __construct(int $id, string $name)
 	{
@@ -72,7 +72,7 @@ class User
 */
 class Manager extends User
 {
- public function canEdit(Message $message): bool
+	public function canEdit(Message $message): bool
 	{
 		return true;
 	}
@@ -98,13 +98,13 @@ class Admin extends User
 
 class Message
 {
-    /** @var User */
-    private $creator;
+	/** @var User */
+	private $creator;
     
-    /** @var string */
-    private $text;
+	/** @var string */
+ 	private $text;
     
-    public function __construct(User $creator, string $text)
+	public function __construct(User $creator, string $text)
 	{
 		$this -> creator = $creator;
 		$this -> text = $text;
